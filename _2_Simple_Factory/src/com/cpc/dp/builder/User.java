@@ -2,7 +2,7 @@ package com.cpc.dp.builder;
 
 import java.time.LocalDate;
 
-//Entity Class used to construct the DTO
+//Entity class used to construct the DTO
 public class User {
 
 	private String firstName;
@@ -38,6 +38,5 @@ public class User {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-	
 	
 }

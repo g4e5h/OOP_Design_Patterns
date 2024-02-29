@@ -6,14 +6,21 @@ import java.time.LocalDate;
 public class Client {
 
 	public static void main(String[] args) {
-		User user=createUser();     //mocking a user from persistance
-		UserDTO dto = directorBuild(new UserWebDTOBuilder(), user);
+		User user = createUser();
+		UserDTOBuilder builder = new UserWebDTOBuilder();
+		//Client has to provide director with concrete builder
+		UserDTO dto = directBuild(builder, user);
 		System.out.println(dto);
 	}
-
-	private static UserDTO directorBuild(UserDTOBuilder userWebDTOBuilder, User user){
-		return userWebDTOBuilder.withFirstName(user.getFirstName()).withLastName(user.getLastName())
-		.withAddress(user.getAddress()).withBirthday(user.getBirthday()).build();
+	
+	/**
+	 * This method serves the role of director in builder pattern. 
+	 */
+	private static UserDTO directBuild(UserDTOBuilder builder, User user) {
+		return builder.withFirstName(user.getFirstName()).withLastName(user.getLastName())
+			   .withAddress(user.getAddress())
+			   .withBirthday(user.getBirthday())
+			   .build();
 	}
 	
 	/**
