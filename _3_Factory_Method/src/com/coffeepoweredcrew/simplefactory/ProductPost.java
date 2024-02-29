@@ -25,11 +25,6 @@ public class ProductPost extends Post{
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	@Override
-	public String toString() {
-		return "Post [id=" + getId() + ", title=" + getTitle()+ ", content=" + getContent() + ", createdOn=" + getCreatedOn()
-		+ ", publishedOn=" + getPublishedOn() + "]"+"ProductPost [imageUrl=" + imageUrl + ", name=" + name + "]";
-	}
-
+	
+	
 }

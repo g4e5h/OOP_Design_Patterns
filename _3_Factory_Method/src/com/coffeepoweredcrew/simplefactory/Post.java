@@ -57,12 +57,6 @@ public abstract class Post {
 	public void setPublishedOn(LocalDateTime publishedOn) {
 		this.publishedOn = publishedOn;
 	}
-
-	@Override
-	public String toString() {
-		return "Post [id=" + id + ", title=" + title + ", content=" + content + ", createdOn=" + createdOn
-				+ ", publishedOn=" + publishedOn + "]";
-	}
 	
 	
 }
