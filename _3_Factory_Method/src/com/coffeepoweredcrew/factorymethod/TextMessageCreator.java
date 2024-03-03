@@ -9,7 +9,7 @@ import com.coffeepoweredcrew.factorymethod.message.TextMessage;
 public class TextMessageCreator extends MessageCreator {
 
     @Override
-    public Message createMessage() {
+    protected Message createMessage() {
        return new TextMessage();
     }
 

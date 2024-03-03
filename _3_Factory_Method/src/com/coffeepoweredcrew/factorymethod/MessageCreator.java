@@ -23,6 +23,6 @@ public abstract class MessageCreator {
 
     //FACTORY METHOD TO CREATE MESSAGE
 
-    public abstract Message createMessage();
+    protected abstract Message createMessage();
 	
 }
